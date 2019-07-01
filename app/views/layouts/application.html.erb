@@ -4,28 +4,15 @@
     <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= render "layouts/shim" %>
   </head>
-
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "sample app", "#", id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to t("Home"),   "#" %></li>
-            <li><%= link_to t("Help"),   "#" %></li>
-            <li><%= link_to t("Log in"), "#" %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render "layouts/header" %>
     <div class="container">
       <%= yield %>
+      <%= render "layouts/footer" %>
     </div>
-    <%= link_to t("English"), locale:"en" %>
-    <%= link_to t("Vietnamese"), locale:"vi" %>
   </body>
 </html>
