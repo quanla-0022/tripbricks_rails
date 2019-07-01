@@ -29,10 +29,10 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+vi:
+  hello: "Xin chào"
   title: "Ruby on Rails Tutorial"
-  welcome: "Welcome to the Sample App"
-  sampleapp: "sample application."
-  thisishomepage: "This is the home page for the"
-  signupnow: "Sign up now!"
+  welcome: "Chào mừng đến với Sample App"
+  sampleapp: "ứng dụng đơn giản sample app."
+  thisishomepage: "Đây là trang chủ của"
+  signupnow: "Đăng kí ngay!"
