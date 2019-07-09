@@ -6,10 +6,13 @@ ruby "2.5.5"
 gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
+gem "bootstrap-will_paginate", "1.0.0"
 gem "coffee-rails", "~> 4.2"
 gem "config"
+gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
+gem "kaminari"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.3"
 gem "rubocop", "~> 0.54.0", require: false
