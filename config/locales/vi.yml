@@ -33,4 +33,6 @@ vi:
   profile: "Trang cá nhân"
   settings: "Thiết lập"
   logout: "Đăng xuất"
+  remember_me: "Duy trì tình trạng đăng nhập"
+  remember_me_on_this_computer: "Duy trì tình trạng đăng nhập trên máy tính này"
   form_contains: "Trong form gồm có"
