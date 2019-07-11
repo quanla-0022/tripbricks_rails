@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  scope :ordered_by_name, ->{order(name: :asc)}
   attr_accessor :remember_token
   before_save :email_downcase
   validates :name, presence: true,
