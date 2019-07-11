@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     root "static_pages#home"
     resources :users
   end
+  resources :account_activations, only: [:edit]
 end
