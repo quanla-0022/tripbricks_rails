@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     user = User.find_by email: params[:session][:email].downcase
 
     if user&.authenticate(params[:session][:password])
-      authenticated user
+      checked_user_ativated user
     else
       flash.now[:danger] = t "sign_in_errors"
       render :new
@@ -17,9 +17,14 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
 
-  def authenticated user
-    log_in user
-    params[:session][:remember_me] == Settings.checked ? remember(user) : forget(user)
-    redirect_back_or user
+  def checked_user_ativated user
+    if user.activated?
+      log_in user
+      params[:session][:remember_me] == Settings.checked ? remember(user) : forget(user)
+      redirect_back_or user
+    else
+      flash[:warning] = t "check_email_notice"
+      redirect_to root_url
+    end
   end
 end
