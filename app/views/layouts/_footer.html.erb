@@ -1,13 +1,53 @@
-<footer class="footer">
-  <small>
-    <%= t("the") %> <a href="https://www.railstutorial.org/"><%= t("ruby_on_Rails_Tutorial") %></a>
-    <%= t("by") %> <a href="http://www.michaelhartl.com/"><%= t("michael_Hartl") %></a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to t("about"), about_path %></li>
-      <li><%= link_to t("contact"), contact_path %></li>
-      <li><a href="http://news.railstutorial.org/"><%= t("news") %></a></li>
-    </ul>
-  </nav>
+<footer class="full-row footer">
+    <div class="container footer-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <%= link_to image_tag("logo.png", alt: "logo", class: "img-responsive img-logo"), "#" %>
+                <p><i>Based in Hanoi, we are creating a system that allows all online users plan, book and administer their own dynamically packaged holidays in Vietnam and Southeast Asia.</i></p>
+
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <h3 class="text-uppercase"><b>Contact Info</b></h3>
+                <p><span class="fa fa-map-marker text-yellow"></span> Floor, 9, 434 Tran Khat Chan, Hai Ba Trung, Hanoi</p>
+                <p><span class="fa fa-phone text-yellow"></span> +84 (0) 98 453 0860</p>
+                <p><span class="fa fa-envelope-o text-yellow"></span>  info@tripbricks.com</p>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <h3 class="text-uppercase"><b>Discover</b></h3>
+                <ul class="list-recent-post">
+                    <li>
+                        <a href="article.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="article.html">Terms and conditions</a>
+                    </li>
+                    <li>
+                        <a href="article.html">Privacy policy</a>
+                    </li>
+                    <li>
+                        <a href="article.html">Q&A</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <h3 class="text-uppercase"><b>Connect with us</b></h3>
+                <p class="slogan-footer">You got bored on ordinary tours?</br>
+                Let’s plan your own dynamically packaged adventures!</p>
+                <ul class="list-inline list-connect-us">
+                    <li>
+                      <%= link_to image_tag("icon-footer/fb.png", alt: "facebook", class: "img-responsive"), "https://www.facebook.com/dautotuong" %>
+                    </li>
+                    <li>
+                      <%= link_to image_tag("icon-footer/sp.png", alt: "facebook", class: "img-responsive"), "https://www.facebook.com/dautotuong" %>
+                    </li>
+                    <li>
+                      <%= link_to image_tag("icon-footer/tw.png", alt: "facebook", class: "img-responsive"), "https://www.facebook.com/dautotuong" %>
+                    </li>
+                    <li>
+                      <%= link_to image_tag("icon-footer/yt.png", alt: "facebook", class: "img-responsive"), "https://www.facebook.com/dautotuong" %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>

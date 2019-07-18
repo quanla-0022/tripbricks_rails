@@ -1,25 +1,43 @@
 <% provide :title, t("log_in") %>
-<h1><%= t "log_in" %></h1>
+<div class="full-row page-content">
+    <div class="container no-padding">
+        <div class="main-contain-wrapper">
+            <div class="m-grid__item m-grid__item--fluid  m-grid__item--order-tablet-and-mobile-1  m-login__wrapper">
+                <div class="m-login__body">
+                    <div class="m-login__signin">
+                        <div class="m-login__title">
+                          <h3><%= t "log_in" %></h3>
+                        </div>
+                        <%= form_for(:session, url: login_path) do |f| %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
+                          <%= f.label t("email"), class: "form-text" %>
+                          <%= f.email_field :email, class: "form-control" %>
 
-      <%= f.label t("email") %>
-      <%= f.email_field :email, class: "form-control" %>
+                          <%= f.label t("password"), class: "form-text" %>
+                          <%= link_to t("forgot_password"), new_password_reset_path %>
+                          <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.label t("password") %>
-      <%= link_to t("forgot_password"), new_password_reset_path %>
-      <%= f.password_field :password, class: "form-control" %>
+                          <%= f.label t("remember_me") ,class: "checkbox inline form-text" do %>
+                            <%= f.check_box :remember_me %>
+                            <span><%= t "remember_me_on_this_computer" %></span>
+                          <% end %>
 
-      <%= f.label t("remember_me") ,class: "checkbox inline" do %>
-        <%= f.check_box :remember_me %>
-        <span><%= t "remember_me_on_this_computer" %></span>
-      <% end %>
-
-      <%= f.submit t("log_in"), class: "btn btn-primary" %>
-    <% end %>
-
-    <p><%= t "new_user" %> <%= link_to t("sign_up_now!"), signup_path %></p>
-  </div>
+                          <%= f.submit t("log_in"), class: "btn btn-primary" %>
+                        <% end %>
+                        <br/>
+                        <p class="text-center devine-text"><%= t "or_login" %></p>
+                        <br/>
+                        <div class="row">
+                          <div class="col-md-6 login-button">
+                            <%= link_to t("Google"), "#", class: "btn btn-danger button-signin" %>
+                          </div>
+                          <div class="col-md-6 login-button">
+                            <%= link_to t("Facebook"), "#", class: "btn btn-primary button-signin" %>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

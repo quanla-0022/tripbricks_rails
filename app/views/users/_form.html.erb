@@ -1,16 +1,16 @@
 <%= form_for(@user) do |f| %>
   <%= render "shared/errors_messages", object: @user %>
 
-  <%= f.label t("name") %>
+  <%= f.label t("name"), class: "form-text" %>
   <%= f.text_field :name, class: "form-control" %>
 
-  <%= f.label t("email") %>
+  <%= f.label t("email"), class: "form-text" %>
   <%= f.email_field :email, class: "form-control" %>
 
-  <%= f.label t("password") %>
+  <%= f.label t("password"), class: "form-text" %>
   <%= f.password_field :password, class: "form-control" %>
 
-  <%= f.label t("confirmation") %>
+  <%= f.label t("confirmation"), class: "form-text" %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>

@@ -1,14 +1,13 @@
-<div class="center jumbotron">
-  <h1><%= t("welcome")%></h1>
-
-  <h2>
-    <%= t("thisishomepage") %>
-    <a href="https://www.railstutorial.org/"><%= t("title") %></a>
-    <%= t("sampleapp") %>
-  </h2>
-
-  <%= link_to t("signupnow"), signup_path, class: "btn btn-lg btn-primary" %>
+<%= render "static_pages/banner" %>
+<div class="full-row">
+  <div class="container about-home">
+      <div class="title-picture">
+          <h2>WELCOME TO Tripbrick</h2>
+          <%= link_to image_tag("pattern-title-picture.png", alt:"", class: "img-responsive bg-title-picture"), "#" %>
+      </div>
+      <p>The world is like a book and Vietnam is an unique chapter.</p>
+      <p>Let's begin your vacations by enjoying our suggested Packages or create your own dynamically adventures with us.</p>
+  </div>
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            "http://rubyonrails.org/" %>
+<%= render "static_pages/search_form" %>
+<%= render "static_pages/our_destination" %>

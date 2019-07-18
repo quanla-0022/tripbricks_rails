@@ -67,3 +67,5 @@ en:
   not_current_user: "You are not current user!!"
   user_not_found: "User not found !"
   activate: "Activate"
+  fill_full_info: "Fill out the information to create a new account!"
+  or_login: "Or log in with"

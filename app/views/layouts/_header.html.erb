@@ -1,29 +1,90 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("home"), root_path %></li>
-        <li><%= link_to t("help"), help_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to t("users"), users_path %></li>
-          <li class="dropdown">
-            <%= link_to t("account"), "#", class: "dropdown-toggle", "data-toggle": "dropdown"  %>
-            <ul class="dropdown-menu">
-              <li><%= link_to t("profile"), current_user %></li>
-              <li><%= link_to t("settings"), edit_user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to t("logout"), logout_path, method: :delete %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to t("login"), login_path %></li>
-        <% end %>
-        <li class="language"><%= link_to "En |", locale:"en" %></li>
-        <li class="language"><%= link_to "Vi", locale:"vi" %></li>
-      </ul>
+<% if current_page?(root_path) || current_page?("/") %>
+  <header class="">
+<% else %>
+  <header class="black-header">
+<% end %>
+    <!-- <div class="container head-top">
+        <div class="pull-right">
+        </div>
+    </div> -->
+    <!-- nav bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to image_tag("logo.png", alt: "logo", class: "img-responsive pull-left img-logo logo-web"), root_path %>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar" id="navbar-collapse-3">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="navbar-left-item"><a href="hotel.html">Hotels</a></li>
+                    <li class="navbar-left-item"><a href="Packages.html">Packages</a></li>
+                    <li class="navbar-left-item"><a href="blog.html">Blog</a></li>
+                    <li class="navbar-left-item"><a href="article.html">Travel Guide</a></li>
+                    <li class="navbar-left-item"><a href="Contact.html">Contact us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="li-number">
+                        <a href="tel:+84 (0) 98 453 0860"><span class="fa fa-phone text-violet"></span> 098 453 0860</a>
+                    </li>
+                     <!-- <li>
+                        <a class="btn btn-search-top" data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3"><span class="fa fa-search"></span></a>
+                    </li> -->
+                    <!--<li class="dropdown select-language">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <img src="images/EN-flag.png" alt="" /> <span>EN</span>
+                            <span class="fa fa-angle-down"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                            <div class="col-xs-12 col-sm-6 dropdown-language">
+                                <h4 class="dropdown-title">Language</h4>
+                                <ul>
+                                    <li><a href="#"><img src="images/VN-flag.png" alt=""/> Tiếng Việt</a></li>
+                                    <li class="selected"><a href="#"><img src="images/EN-flag.png" alt=""/> English</a></li>
+                                    <li><a href="#"><img src="images/VN-flag.png" alt=""/> Tiếng Việt</a></li>
+                                    <li><a href="#"><img src="images/EN-flag.png" alt=""/> English</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 dropdown-currency">
+                                <h4 class="dropdown-title">Currency</h4>
+                                <ul>
+                                    <li class="selected"><a href="#">VND <span>Việt Nam Đồng</span></a></li>
+                                    <li><a href="#">USD <span>Dollar Mỹ</span></a></li>
+                                    <li><a href="#">SGD <span>Dollar Singapore</span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li> -->
+                    <li class="header-login-register">
+                      <% if logged_in? %>
+                        <%= link_to @current_user.name, current_user %>
+                        <%= link_to t("logout"), logout_path, method: :delete %>
+                      <% else %>
+                        <%= link_to t("login"), login_path %>
+                        <%= link_to t("signup"), signup_path %>
+                      <% end %>
+                    </li>
+                </ul>
+                <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" />
+                        </div>
+                        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </form>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
-  </div>
+    <!-- /.navbar -->
+    <!-- .nav bar -->
 </header>

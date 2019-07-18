@@ -67,3 +67,5 @@ vi:
   not_current_user: "Bạn không phải người dùng hiện tại!!"
   user_not_found: "Không tìm thấy người dùng!!"
   activate: "Kích hoạt tài khoản"
+  fill_full_info: "Điền đầy đủ thông tin để tạo tài khoản mới!"
+  or_login: "Hoặc đăng nhập với"
