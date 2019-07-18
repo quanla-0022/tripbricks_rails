@@ -78,10 +78,11 @@ input {
 .footer {
   left: 0;
   bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
 }
 
 .black-header {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
   position: relative;
   height: 70px;
 }
